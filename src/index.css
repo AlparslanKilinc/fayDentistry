@@ -3,7 +3,8 @@
   --lighter-color: #58d6ff;
   --darker-color: #29a3c3;
   --gray-color: #e0e0e0;
-  --font-family: "Outfit", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --dark-grey-color: #656567;
+  --font-family: "Bon Vivant", system-ui, Avenir, Helvetica, Arial, sans-serif;
   --base-font-size: 16px;
 
   line-height: 1.5;
