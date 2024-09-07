@@ -1,13 +1,11 @@
 import React from "react";
-import ButtonGroup from "@mui/material/ButtonGroup";
-import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import "../css/menuBar.css";
 import logo from "../assets/logo.png";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import BasicMenu from "./BasicMenu";
+import BasicMenu from "../components/BasicMenu";
 
 const MenuBar = () => {
   const homeList = ['Home Page', 'About Us', 'Our History'];
@@ -23,11 +21,9 @@ const MenuBar = () => {
 
   return (
     <div className="menu"> 
-
       <div className="header">
         <img src={logo} alt="logo" className="logo" />
         <div className="menu-info">
-
           <div className="text-info">
             <div className="appointment">
               <Link href="#" underline="none" className='appointment-link' sx={{ color: '#2fbfeb' }}> MAKE AN APPOINTMENT:</Link> 
@@ -35,7 +31,6 @@ const MenuBar = () => {
             </div>
             <div className="address">16 Old Riverhead Road, Westhampton Beach</div>
           </div>
-
           <div className="social-links">
             <Link href="#" underline="none" className='social-link'><FacebookIcon sx={{ color: '#2fbfeb' }} fontSize="large"/></Link>
             <Link href="#" underline="none" className='social-link'><YouTubeIcon sx={{ color: '#2fbfeb' }} fontSize="large"/></Link>
