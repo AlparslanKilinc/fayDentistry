@@ -12,9 +12,9 @@ const DrFay = () => {
           className="fay-image"
         />
         <div className="fay-text-content">
-            <h1>{drFayContent.title}</h1>
+            <div className="title">{drFayContent.title}</div>
             <p>{drFayContent.intro}</p>
-            <blockquote>{drFayContent.quote}</blockquote>
+            <div className="quote"><blockquote>{drFayContent.quote}</blockquote> </div>
             <p>{drFayContent.education}</p>
             <p>{drFayContent.approach}</p>
             <p>{drFayContent.philosophy}</p>

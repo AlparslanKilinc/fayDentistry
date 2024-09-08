@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
 .fay-image {
@@ -10,18 +11,34 @@
     object-fit: cover;
 }
 
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
 p {
   margin: 0;
   padding: 0;
 }
 
+.quote {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
 .fay-text-content {
+  padding: 1rem;
   display: flex;
-  font-size: 12px;
+  font-size: 14px;
   flex-direction: column;
   gap: 10px;
   text-overflow: wrap;
   width: 512px;
   text-align: left;
-  max-height: 700px;
+  max-height: 900px;
+  line-height: 1.2;
 }

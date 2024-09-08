@@ -4,6 +4,7 @@ import Layout from "./Layout";
 import Home from "./pages/Home";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import DrFay from "./pages/DrFay";
+import Mission from "./pages/Mission";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <Route path="/" element={<Home/>} exact />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/dr-fay" element={<DrFay />} />
+            <Route path="/mission" element={<Mission />} />
           </Routes>
         </Layout>
       </Router>

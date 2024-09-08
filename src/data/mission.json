@@ -1,0 +1,27 @@
+{
+    "mission": [
+        {
+            "title": "PERSONALIZED CARE",
+            "image": "personalized_care",
+            "content": [
+                "We recognize that each person who comes into our office is different. They bring with them different circumstances, past experiences and expectations. Our goal is to offer personalized care that meets your exact needs, whether that means creating a plan to fix decades of inferior work, helping you gain confidence by correcting a smile that has always made you self-conscious, or laying the foundation for oral hygiene habits that will keep your teeth healthy for a lifetime.",
+                "In addition to providing care that is customized just for you in comfortable and calm environment, we emphasize education and prevention. We want you to understand your oral heath and the role you can play in maintaining it. We pride ourselves on courteous, flexible service that respects your time and finances."
+            ]
+        },
+        {
+            "title": "EXCELLENCE",
+            "image": "../assets/excellence.jpg",
+            "content": [
+                "A quest for excellence is at the core of every decision we make. The materials we use, the education we provide, the time it takes to make the contours of each tooth perfect – every step is design to improve the experience and enhance the results for our patients. We hold not only ourselves, but every vendor we partner with, to this high standard, ensuring that our impeccable work lasts the test of time.",
+                "In order to maintain the highest levels of excellence, we invest in continuing education to further our underlying knowledge of dentistry, advanced training in new techniques, and the most sophisticated technology. We continuously learn from the best so we can be the best."
+            ]
+        },
+        {
+            "title": "INTEGRATED APPROACH",
+            "image": "../assets/integrated_approach.jpg",
+            "content": [
+                "Proper dental care is fundamental to general health, and we take pride in our role on your healthcare team. Through education and treatment, we enable you to take control of your oral health, but we recognize that a great smile can improve more than your physical wellbeing. By combining science and artistry we can help you achieve a gorgeous smile that lights up a room and boosts your self-confidence."
+            ]
+        }
+    ]
+}
