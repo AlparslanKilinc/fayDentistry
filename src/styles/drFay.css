@@ -1,0 +1,27 @@
+.fay-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fay-image {
+    width: 500px;
+    height: 700px;
+    object-fit: cover;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.fay-text-content {
+  display: flex;
+  font-size: 12px;
+  flex-direction: column;
+  gap: 10px;
+  text-overflow: wrap;
+  width: 512px;
+  text-align: left;
+  max-height: 700px;
+}
