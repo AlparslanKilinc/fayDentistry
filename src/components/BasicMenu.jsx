@@ -2,6 +2,7 @@ import {useState} from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { Link } from "react-router-dom";
 
 export default function BasicMenu({ name, menuList }) {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -22,8 +23,12 @@ export default function BasicMenu({ name, menuList }) {
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
-        color="inherit"
-        fontWeight="inherit"
+        sx={{
+          color: "white",
+          "&:hover": {
+            backgroundColor: "#2fbfeb",
+          },
+        }}
         onClick={handleClick}
       >
         {name}
@@ -39,7 +44,9 @@ export default function BasicMenu({ name, menuList }) {
       >
         {menuList.map((item, index) => (
           <MenuItem key={index} onClick={handleClose}>
-            {item}
+            <Link to={item.link} className="menu-item" style={{ color: 'inherit', textDecoration: 'none' }}>
+              {item.name}
+            </Link>
           </MenuItem>
         ))}
       </Menu>

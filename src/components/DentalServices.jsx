@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import office_building from "../assets/office_building.jpg";
-import "../css/dentalServices.css";
+import "../styles/dentalServices.css";
 
 const DentalServices = () => {
   const [hoveredService, setHoveredService] = useState(null);

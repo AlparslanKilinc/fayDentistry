@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import office_building from "../assets/office_building.jpg";
 import head_shot from "../assets/head_shot.jpg";
-import "../css/imageSlider.css";
+import "../styles/imageSlider.css";
 
 const ImageSlider = () => {
   const images = [office_building, head_shot];

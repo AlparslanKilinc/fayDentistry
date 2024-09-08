@@ -1,32 +1,30 @@
 import React from "react";
-import Link from "@mui/material/Link";
-import "../css/menuBar.css";
+import "../styles/menuBar.css";
 import logo from "../assets/logo.png";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import BasicMenu from "../components/BasicMenu";
+import { Link } from "react-router-dom";
+import SimpleMenuLink from "./SimpleMenuLink";
 
 const MenuBar = () => {
-  const homeList = ['Home Page', 'About Us', 'Our History'];
-  const drFayList = ['Biography', 'Credentials', 'Publications'];
-  const missionList = ['Our Vision', 'Core Values', 'Community Involvement'];
-  const servicesList = ['General Dentistry', 'Cosmetic Dentistry', 'Orthodontics'];
-  const testimonialsList = ['Patient Stories', 'Video Testimonials'];
-  const faqsList = ['General FAQs', 'Insurance FAQs', 'Treatment FAQs'];
-  const contactList = ['Contact Form', 'Office Hours', 'Directions'];
-  const longIslandList = ['Local Services', 'Area Guide'];
-  const covidList = ['Safety Measures', 'Appointment Guidelines'];
-
+  const servicesList = [
+    { name: 'General Dentistry', path: '/services/general' },
+    { name: 'Cosmetic Dentistry', path: '/services/cosmetic' },
+    { name: 'Orthodontics', path: '/services/orthodontics' }
+  ];
 
   return (
     <div className="menu"> 
       <div className="header">
-        <img src={logo} alt="logo" className="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" className="logo" />
+        </Link>
         <div className="menu-info">
           <div className="text-info">
             <div className="appointment">
-              <Link href="#" underline="none" className='appointment-link' sx={{ color: '#2fbfeb' }}> MAKE AN APPOINTMENT:</Link> 
+              <Link href="#" underline="none" className='appointment-link'> MAKE AN APPOINTMENT:</Link> 
               <div>631-288-9000</div>
             </div>
             <div className="address">16 Old Riverhead Road, Westhampton Beach</div>
@@ -41,15 +39,14 @@ const MenuBar = () => {
       </div>
 
       <div className="menu-group">
-        <BasicMenu name='HOME' menuList={homeList} />
-        <BasicMenu name='DR.FAY' menuList={drFayList} />
-        <BasicMenu name='MISSION' menuList={missionList} />
+        <SimpleMenuLink name='HOME' path="/" />
+        <SimpleMenuLink name="DR. FAY" path="/dr-fay" />
+        <SimpleMenuLink name="MISSION" path="/mission" />
         <BasicMenu name='SERVICES' menuList={servicesList} />
-        <BasicMenu name='TESTIMONIALS' menuList={testimonialsList} />
-        <BasicMenu name='FAQs' menuList={faqsList} />
-        <BasicMenu name='CONTACT US' menuList={contactList} />
-        <BasicMenu name='LONG ISLAND' menuList={longIslandList} />
-        <BasicMenu name='COVID-19' menuList={covidList} />
+        <SimpleMenuLink name='Testimonials' path="/testimonials" />
+        <SimpleMenuLink name="FAQs" path="/faqs" />
+        <SimpleMenuLink name="CONTACT US" path="/contact" />
+        <SimpleMenuLink name="LONG ISLAND" path="/long-island" />
       </div>
 
     </div>

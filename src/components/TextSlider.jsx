@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../css/textSlider.css";
+import "../styles/textSlider.css";
 import slidesData from "../data/homePageSliderContent.json";
 
 const TextSlider = () => {
