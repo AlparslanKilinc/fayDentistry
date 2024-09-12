@@ -46,7 +46,6 @@ const MenuBar = () => {
         <SimpleMenuLink name='Testimonials' path="/testimonials" />
         <SimpleMenuLink name="FAQs" path="/faqs" />
         <SimpleMenuLink name="CONTACT US" path="/contact" />
-        <SimpleMenuLink name="LONG ISLAND" path="/long-island" />
       </div>
 
     </div>
