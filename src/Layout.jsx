@@ -1,17 +1,71 @@
-import React from 'react';
-import MenuBar from './components/MenuBar';
-import Footer from './components/Footer';
-import './styles/layout.css';
+import React, { useState, useEffect } from 'react';
+import { Box, useMediaQuery, useTheme, Fab, Zoom } from '@mui/material';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 const Layout = ({ children }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Handle scroll to top button visibility
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setShowScrollTop(scrollY > 400);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleScrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <div className="layout">
-      <MenuBar />
-      <main className="content">
+    <Box 
+      sx={{ 
+        display: 'flex', 
+        flexDirection: 'column', 
+        minHeight: '100vh',
+        position: 'relative',
+      }}
+    >
+      <Header isMobile={isMobile} />
+      <Box 
+        component="main" 
+        sx={{ 
+          flexGrow: 1,
+          pt: 2,
+          pb: 4,
+          px: isMobile ? 2 : 4,
+          bgcolor: 'background.default',
+        }}
+      >
         {children}
-      </main>
+      </Box>
       <Footer />
-    </div>
+      
+      {/* Scroll to top button */}
+      <Zoom in={showScrollTop}>
+        <Fab
+          color="primary"
+          size="small"
+          aria-label="scroll back to top"
+          onClick={handleScrollTop}
+          sx={{
+            position: 'fixed',
+            bottom: 20,
+            right: 20,
+            zIndex: 2,
+          }}
+        >
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </Zoom>
+    </Box>
   );
 };
 
