@@ -33,7 +33,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import logo from "../../assets/logo.png";
 import TopInfo from "./TopInfo";
-import horizontal_logo from "../../assets/horizontal_logo.png";
+import horizontal_logo from "../../assets/horizontal_logo.png"
 
 // Hide AppBar on scroll down
 function HideOnScroll(props) {
@@ -146,10 +146,15 @@ const Header = ({ isMobile }) => {
         }}
       >
         <Avatar
-          src={logo}
+          src={horizontal_logo}
           alt="Logo"
           variant="square"
-          sx={{ width: 100, height: 50, objectFit: "contain" }}
+          sx={{
+            width: "auto",
+            height: 40,
+            maxWidth: 120,
+            objectFit: "contain",
+          }}
         />
         <IconButton onClick={handleDrawerToggle}>
           <CloseIcon />
@@ -301,8 +306,9 @@ const Header = ({ isMobile }) => {
                         alt="Logo"
                         sx={{
                           width: "auto",
-                          height: 60,
-                          maxWidth: 140,
+                          height: 50,
+                          maxWidth: 120,
+                          maxHeight: 50,
                           objectFit: "contain",
                           mr: 1,
                         }}

@@ -20,6 +20,14 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
+  overscroll-behavior-x: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
 }
 
 #root {

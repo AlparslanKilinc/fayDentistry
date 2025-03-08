@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import React from "react";
+import { Link as RouterLink } from "react-router-dom";
 import {
   Box,
   Container,
@@ -11,16 +11,16 @@ import {
   useTheme,
   useMediaQuery,
   Stack,
-} from '@mui/material';
-import PhoneIcon from '@mui/icons-material/Phone';
-import EmailIcon from '@mui/icons-material/Email';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
+} from "@mui/material";
+import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from "@mui/icons-material/Email";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
 const ContactSection = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   const contactInfo = [
     {
       icon: <PhoneIcon />,
@@ -31,7 +31,7 @@ const ContactSection = () => {
     {
       icon: <EmailIcon />,
       title: "Email",
-      content: "info@manhattandentistry.com",
+      content: "info@faydentistry.com",
       link: "mailto:info@manhattandentistry.com",
     },
     {
@@ -49,8 +49,8 @@ const ContactSection = () => {
   ];
 
   return (
-    <Box 
-      sx={{ 
+    <Box
+      sx={{
         py: { xs: 6, md: 10 },
         bgcolor: theme.palette.background.paper,
       }}
@@ -59,58 +59,56 @@ const ContactSection = () => {
         <Grid container spacing={6} alignItems="center">
           <Grid item xs={12} md={6}>
             <Box sx={{ pr: { md: 4 } }}>
-              <Typography 
-                variant="h6" 
-                color="primary" 
+              <Typography
+                variant="h6"
+                color="primary"
                 gutterBottom
                 sx={{ fontWeight: 600 }}
               >
                 CONTACT US
               </Typography>
-              <Typography 
-                variant="h3" 
-                gutterBottom
-                sx={{ fontWeight: 700 }}
-              >
+              <Typography variant="h3" gutterBottom sx={{ fontWeight: 700 }}>
                 Get in Touch with Our Team
               </Typography>
-              <Typography 
-                variant="body1" 
+              <Typography
+                variant="body1"
                 paragraph
-                sx={{ color: 'text.secondary', mb: 4 }}
+                sx={{ color: "text.secondary", mb: 4 }}
               >
-                Whether you're a new patient or have been with us for years, we're here to answer your questions and provide the dental care you need.
+                Whether you're a new patient or have been with us for years,
+                we're here to answer your questions and provide the dental care
+                you need.
               </Typography>
-              
+
               <Grid container spacing={3}>
                 {contactInfo.map((item, index) => (
                   <Grid item xs={12} sm={6} key={index}>
-                    <Paper 
+                    <Paper
                       elevation={1}
-                      sx={{ 
+                      sx={{
                         p: 2,
-                        height: '100%',
-                        display: 'flex',
-                        flexDirection: 'column',
+                        height: "100%",
+                        display: "flex",
+                        flexDirection: "column",
                         borderLeft: `4px solid ${theme.palette.primary.main}`,
-                        transition: 'all 0.3s ease',
-                        '&:hover': {
-                          transform: 'translateY(-5px)',
+                        transition: "all 0.3s ease",
+                        "&:hover": {
+                          transform: "translateY(-5px)",
                           boxShadow: 3,
-                        }
+                        },
                       }}
                     >
                       <Box
                         sx={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          color: 'primary.main',
+                          display: "flex",
+                          alignItems: "center",
+                          color: "primary.main",
                           mb: 1,
                         }}
                       >
                         {item.icon}
-                        <Typography 
-                          variant="h6" 
+                        <Typography
+                          variant="h6"
                           sx={{ ml: 1, fontWeight: 600 }}
                         >
                           {item.title}
@@ -120,22 +118,26 @@ const ContactSection = () => {
                         <Typography
                           component="a"
                           href={item.link}
-                          target={item.link.startsWith('https') ? '_blank' : undefined}
-                          rel={item.link.startsWith('https') ? 'noopener noreferrer' : undefined}
+                          target={
+                            item.link.startsWith("https") ? "_blank" : undefined
+                          }
+                          rel={
+                            item.link.startsWith("https")
+                              ? "noopener noreferrer"
+                              : undefined
+                          }
                           sx={{
-                            color: 'text.primary',
-                            textDecoration: 'none',
-                            '&:hover': {
-                              color: 'primary.main',
+                            color: "text.primary",
+                            textDecoration: "none",
+                            "&:hover": {
+                              color: "primary.main",
                             },
                           }}
                         >
                           {item.content}
                         </Typography>
                       ) : (
-                        <Typography variant="body1">
-                          {item.content}
-                        </Typography>
+                        <Typography variant="body1">{item.content}</Typography>
                       )}
                     </Paper>
                   </Grid>
@@ -150,11 +152,11 @@ const ContactSection = () => {
               sx={{
                 p: 4,
                 borderRadius: 3,
-                overflow: 'hidden',
-                position: 'relative',
-                '&::before': {
+                overflow: "hidden",
+                position: "relative",
+                "&::before": {
                   content: '""',
-                  position: 'absolute',
+                  position: "absolute",
                   top: 0,
                   left: 0,
                   right: 0,
@@ -166,10 +168,14 @@ const ContactSection = () => {
               <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>
                 Request an Appointment
               </Typography>
-              <Typography variant="body2" sx={{ mb: 3, color: 'text.secondary' }}>
-                Fill out the form below and we'll get back to you as soon as possible.
+              <Typography
+                variant="body2"
+                sx={{ mb: 3, color: "text.secondary" }}
+              >
+                Fill out the form below and we'll get back to you as soon as
+                possible.
               </Typography>
-              
+
               <Stack spacing={3} component="form">
                 <Grid container spacing={2}>
                   <Grid item xs={12} sm={6}>
@@ -189,7 +195,7 @@ const ContactSection = () => {
                     />
                   </Grid>
                 </Grid>
-                
+
                 <TextField
                   fullWidth
                   label="Email Address"
@@ -197,14 +203,14 @@ const ContactSection = () => {
                   type="email"
                   required
                 />
-                
+
                 <TextField
                   fullWidth
                   label="Phone Number"
                   variant="outlined"
                   required
                 />
-                
+
                 <TextField
                   fullWidth
                   label="How can we help you?"
@@ -212,7 +218,7 @@ const ContactSection = () => {
                   multiline
                   rows={4}
                 />
-                
+
                 <Button
                   type="submit"
                   variant="contained"
@@ -222,10 +228,17 @@ const ContactSection = () => {
                 >
                   Send Message
                 </Button>
-                
-                <Typography variant="caption" align="center" sx={{ color: 'text.secondary' }}>
-                  By submitting this form, you agree to our{' '}
-                  <RouterLink to="/privacy-policy" style={{ color: theme.palette.primary.main }}>
+
+                <Typography
+                  variant="caption"
+                  align="center"
+                  sx={{ color: "text.secondary" }}
+                >
+                  By submitting this form, you agree to our{" "}
+                  <RouterLink
+                    to="/privacy-policy"
+                    style={{ color: theme.palette.primary.main }}
+                  >
                     Privacy Policy
                   </RouterLink>
                 </Typography>
